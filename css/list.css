@@ -1,0 +1,554 @@
+*
+{
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body
+{
+	background: rgb(0,0,0);
+	background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(36,151,255,1) 100%, rgba(0,0,0,1) 100%);
+	background-size: 100% auto;
+}
+
+#containerForUser
+{
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.7);
+	z-index: 1;
+}
+
+#containerForUser div
+{
+	font-family:sans-serif;
+	font-weight: bold;
+	color: white;
+	font-size: 150%;
+	padding-top: 30%;
+	text-align: center;
+}
+
+#newUser
+{
+	width: 90%;
+	height: 5vh;
+	background: none;
+	border: 1px solid silver;
+	color: white;
+	font-size: 110%;
+	margin-top: 5%;
+	margin-left: 5%;
+	margin-bottom: 5%;
+}
+
+#accpetUser
+{
+	float: right;
+	margin-right: 5%;
+	font-size: 120%;
+}
+
+header
+{
+	width: 100%;
+}
+
+header h1
+{
+	padding-top: 5%;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-bottom: 5%;
+	font-family:sans-serif;
+	font-weight: bold;
+	color: white;
+	float: left;
+	font-size: 180%;
+}
+
+header img
+{
+	width: 10%;
+	float: right;
+	margin-right: 2%;
+	margin-top: 2%;
+	cursor: pointer;
+}
+
+@keyframes rotateStart
+{
+	to{transform: rotateZ(-10deg)};
+}
+
+@keyframes rotateEnd
+{
+	from{transform: rotateZ(-10deg)};
+}
+
+nav
+{
+	clear: both;
+	width: 70%;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: 1px 1px 6px 1px white;
+	display: none;
+	margin-bottom: 5%;
+}
+
+nav ul
+{
+	list-style: none;
+}
+
+nav input
+{
+	font-family:sans-serif;
+	font-weight: bold;
+	color: white;
+	margin-bottom: 4%;
+	width: 100%;
+	font-size: 120%;
+	padding: 5%;
+	text-align: left;
+	border-radius: 0px 10px 10px 0px;
+	border: none;
+	background: none;
+}
+
+nav ul li:hover
+{
+	background-color: rgba(0,0,0,0.1);
+	cursor: poi
+}
+
+#container, #deleteListContainer
+{
+	clear: both;
+	border: 1px solid silver;
+	width: 93%;
+	padding: 2%;
+	margin-left: 2%;
+	border-radius: 5px;
+	box-shadow: 4px 4px 20px 0px;
+	display: none;
+	margin-bottom: 5%;
+}
+
+#deleteListContainer input
+{
+	margin-top: 6%;
+	font-size: 110%;
+	margin-right: 4%;
+}
+
+#containerFavoriteList
+{
+	clear: both;
+	border: 1px solid silver;
+	width: 60%;
+	padding-top: 3%;
+	padding-bottom: 3%;
+	padding-left: 2%;
+	margin-left: 2%;
+	border-radius: 5px;
+	box-shadow: 4px 4px 20px 0px;
+	display: none;
+	margin-bottom: 5%;
+}
+
+#containerFavoriteList input
+{
+	font-size: 110%;
+	margin-bottom: 5%;
+}
+
+#container label, #deleteListContainer label
+{
+	font-family:sans-serif;
+	font-weight: bold;
+	color: white;
+	font-size: 100%;
+}
+
+#addToListProdukt, #productListPrices, #addToFavoriteProduct, #productFavoritePrices, #deleteFavoriteProduct, #deleteFavoritePrices, #deleteListProduct, #deleteListPrices
+{
+	width: 90%;
+	height: 5vh;
+	margin-bottom: 7%;
+	margin-top: 2%;
+	background: none;
+	border: 1px solid silver;
+	color: white;
+}
+
+.FavoriteButtons
+{
+	display: block;
+}
+
+#acceptProductList, #cancelProductList, #acceptProductFavorite, #cancelProductFavorite, #acceptFavoriteDelete, #cancelFavoriteDelete, #acceptListDelete, #cancelListDelete, #accpetUser, .FavoriteButtons, #deleteListContainer input
+{
+	background: none;
+	color: white;
+	padding: 2%;
+	border: none;
+	transition: 0.1s;
+}
+
+#acceptProductList:active, #cancelProductList:active, #acceptProductFavorite:active, #cancelProductFavorite:active, #acceptFavoriteDelete:active, #cancelFavoriteDelete:active, #acceptDeleteFromList:active, #cancelDeleteFromList:active, #accpetUser:active, .FavoriteButtons:active, #deleteListContainer input:active
+{
+	transform: translateY(4px);
+	transition: 0.1s;
+}
+
+#cancelProductList
+{
+	
+	margin-left: 3%;
+}
+
+main
+{
+	clear: both;
+    padding-bottom: 5%;
+}
+
+main h1
+{
+	color: silver;
+	text-align: center;
+	margin-bottom: 5%;
+}
+
+main select
+{
+	width: 90%;
+	margin-left: 5%;
+	background: none;
+	border: 1px solid silver;
+	height: 4vh;
+	margin-bottom: 5%;
+	color: white;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 110%;
+}
+
+main select option
+{
+	background: #1d79cc;
+	color: white;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 110%;
+	border: none;
+	padding: 10%;
+}
+
+main table
+{
+	margin: 0 auto;
+	border-collapse: collapse;
+	width: 98%;
+}
+
+main table th
+{
+	font-size: 130%;
+	border-bottom: 1px solid darkorange;
+	padding-bottom: 1%;
+	color: white;
+}
+
+main table th:first-child
+{
+    width: 50%;
+}
+
+main table td
+{
+	font-size: 130%;
+    border-bottom: 1px solid grey;
+	padding-bottom: 1%;
+    padding-top: 3%;
+	color: white;
+    text-align: center;
+}
+
+@media only screen and (orientation: portrait)
+{
+    body
+    {
+		background-size: 100% 100vh;
+		overflow: hidden;
+	}
+    
+    #shopping-list
+    {
+		overflow: auto;
+		height: 60vh;
+	}
+}
+
+@media only screen and (min-width: 400px) and (orientation: landscape)
+{
+	header img
+	{
+		width: 8%;
+	}
+	
+	#containerForUser div
+	{
+		padding-top: 20%;
+	}
+	
+	#newUser
+	{
+		width: 40%;
+		margin-left: 30%;
+		height: 8vh;
+	}
+	
+	#accpetUser
+	{
+		margin-right: 28%;
+		font-size: 120%;
+	}
+	
+	nav
+	{
+		width: 50%;
+	}
+	
+	#container
+	{
+		width: 50%;
+	}
+	
+	#deleteListContainer
+	{
+		width: 60%;
+	}
+	
+	#deleteListContainer input
+	{
+		margin-top: 3%;
+	}
+	
+	#containerFavoriteList
+	{
+		width: 35%;
+	}
+
+	#addToListProdukt, #productListPrices, #addToFavoriteProduct, #productFavoritePrices, #deleteFavoriteProduct, #deleteFavoritePrices, #deleteFromListProduct, #deleteFromListPrices
+	{
+		height: 10vh;
+	}
+	
+	main select
+	{
+		height: 10vh;
+	}
+}
+
+@media only screen and (min-width: 400px) and (orientation: portrait)
+{
+	nav
+	{
+		width: 60%;
+	}
+	
+	#deleteListContainer
+	{
+		width: 70%;
+	}
+}
+
+@media only screen and (min-width: 600px) and (orientation: landscape)
+{
+	header img
+	{
+		width: 6%;
+	}
+	
+	nav
+	{
+		width: 40%;
+	}
+	
+	#deleteListContainer
+	{
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 800px) and (orientation: landscape)
+{
+	main select
+	{
+		height: 8vh;
+	}
+	
+	#addToListProdukt, #productListPrices, #addToFavoriteProduct, #productFavoritePrices, #deleteFavoriteProduct, #deleteFavoritePrices, #deleteFromListProduct, #deleteFromListPrices
+	{
+		height: 8vh;
+	}
+	
+	#deleteListContainer
+	{
+		width: 40%;
+	}
+}
+
+@media only screen and (min-width: 600px) and (orientation: portrait)
+{
+	header img
+	{
+		width: 8%;
+	}
+	
+	#newUser
+	{
+		width: 60%;
+		margin-left: 20%;
+	}
+	
+	#accpetUser
+	{
+		margin-right: 18%;
+	}
+	
+	nav
+	{
+		width: 50%;
+	}
+	
+	#deleteListContainer
+	{
+		width: 50%;
+	}
+	
+	#containerFavoriteList
+	{
+		width: 40%;
+	}
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait)
+{
+	header img
+	{
+		width: 7%;
+	}
+	
+	nav
+	{
+		width: 40%;
+	}
+	
+	#deleteListContainer
+	{
+		width: 40%;
+	}
+}
+
+@media only screen and (min-width: 928px) and (orientation: landscape)
+{
+	nav
+	{
+		width: 30%;
+	}
+	
+	#container
+	{
+		width: 40%;
+	}
+	
+	#containerFavoriteList
+	{
+		width: 25%;
+	}
+	
+	#deleteListContainer
+	{
+		width: 32%
+	}
+
+	#addToListProdukt, #productListPrices, #addToFavoriteProduct, #productFavoritePrices, #deleteFavoriteProduct, #deleteFavoritePrices, #deleteFromListProduct, #deleteFromListPrices
+	{
+		height: 6vh;
+	}
+}
+
+@media only screen and (min-width: 928px) and (orientation: portrait)
+{
+	header img
+	{
+		width: 6%;
+	}
+	
+	nav
+	{
+		width: 30%;
+	}
+	
+	#deleteListContainer
+	{
+		width: 32%
+	}
+}
+
+@media only screen and (min-width: 1280px)
+{
+	header img
+	{
+		width: 3%;
+	}
+	
+	#containerForUser div
+	{
+		padding-top: 10%;
+	}
+	#deleteListContainer
+	{
+		width: 24%;
+	}
+	
+	#newUser
+	{
+		width: 40%;
+		margin-left: 30%;
+	}
+	
+	#accpetUser
+	{
+		margin-right: 28%;
+	}
+	
+	nav
+	{
+		width: 20%;
+	}
+	
+	main h1
+	{
+		margin-bottom: 1%;
+	}
+	
+	main select
+	{
+		height: 5vh;
+		width: 40%;
+		margin-left: 30%;
+		margin-bottom: 2%;
+	}
+	
+	main table
+	{
+		width: 70%;
+	}
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lista Zakupów</title>
+	<meta name="author" content="Wałach Rafał tel. (48)730 341 343">
+	<meta name="description" content="Tworząc własną listę zakupów wydajesz mnie, kupując mniej">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/list.css">
+	<link rel="icon" type="image/x-icon" href="img/icon.png"/>
+</head>
+
+<body>
+	<header>
+		<h1>Użytkownik: <span id="login"></span></h1>
+		<img id="hamburger" src="img/hamburger.png" alt="hamburger-menu.png">	
+	</header>
+	<nav id="menu">
+		<ul>
+			<li><input class="added-buttons" type="button" value="Dodaj do listy"></li>
+			<li><input class="added-buttons" type="button" value="Dodaj do ulubionych"></li>
+			<li><input class="delete-buttons" type="button" value="Usuń listę"></li>
+		</ul>
+	</nav>
+	<div id="container"></div>
+	<div id="containerFavoriteList"></div>
+    <div id="deleteListContainer"></div>
+	<main>
+	
+		<h1>Ulubione</h1>
+		<select id="favorite"><option hidden>Rozwiń listę</option></select>
+		<h1>Lista zakupów</h1>
+		<section id="shopping-list">
+			<table>
+				<thead>
+				<th>Produkt</th>
+				<th>Ilość</th>
+				</thead>
+				<tbody id="list"></tbody>
+			</table>
+		</section>
+	</main>
+	<footer></footer>
+	<script type="text/javascript" src="libs/jquery.js"></script>
+	<script type="text/javascript" src="js/list.js"></script>
+</body>
+
+</html>
